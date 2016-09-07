@@ -4,6 +4,7 @@ import { AuthorService } from './author.service';
 @Component({
     selector:'author',
     template:`
+    <hr>
     <h2>Authors</h2>
     {{title}}
     <ul>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { CourseComponent } from './course/index';
 import { AuthorComponent } from './author/index';
+import { StarComponent } from './star/index';
 
 @Component({
   selector: 'my-app',
@@ -9,6 +10,7 @@ import { AuthorComponent } from './author/index';
   <h1>My First Angular 2 App</h1>
   <course></course>
   <author></author>
+  <twinkle></twinkle>
   `
   
 })
