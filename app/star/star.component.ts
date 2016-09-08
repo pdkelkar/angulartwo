@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
     selector: 'twinkle',
@@ -9,15 +9,21 @@ import { Component} from '@angular/core';
                           [class.glyphicon-star]="isClicked"
                           (click)="starClicked()">
                           </i>
-    `
+    `,
+    styles: [`
+        .glyphicon-star{
+            color: orange
+        }    
+    `]
 })
 export class StarComponent{
-
-    isClicked:boolean = false;
+    //isClicked:boolean = false;
+    @Input('is-favourite') isClicked:boolean;
  
-    starClicked(){
-        console.log("star clicked");
-        this.isClicked = !this.isClicked;
+    @Output('starHasChanged') starChange = new EventEmitter();
 
+    starClicked(){
+        this.isClicked = !this.isClicked;
+        this.starChange.emit( {clickValue : this.isClicked } );
     }
 }
