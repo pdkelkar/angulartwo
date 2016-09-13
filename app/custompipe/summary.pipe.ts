@@ -12,7 +12,7 @@ export class SummaryPipe implements PipeTransform {
 
    
         console.log("inside if");
-        summaryLen = parseInt(args);
+        summaryLen = parseInt(args[0]);
    
     return value.substr(0, summaryLen);
   }

@@ -1,0 +1,1 @@
+export {ZippyComponent } from './zippy.component';
