@@ -1,20 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'crush',
     template: `
-    <hr>
-       Likes:  <i class="glyphicon" 
-                  [class.glyphicon-heart-empty]="!isClicked"  
-                  [class.glyphicon-heart]="isClicked"   
+
+       <i class="glyphicon glyphicon-heart" 
+                  [class.unhighlighted]="!isClicked"  
+                  [class.highlighted]="isClicked"   
                   (click)="heartClicked()"></i> {{crushValue}}
     `,
     styles: [`
-        .glyphicon-heart:{
-            color: pink
+        
+        .highlighted{
+             color: deeppink
         },
-        .glyphicon-heart-empty{
-            color: #ccc
+        .unhighlighted{
+             color: #D3D3D3
         }
     `]
 })
@@ -22,7 +23,7 @@ export class HeartComponent{
 
     isClicked:boolean = false;
 
-    crushValue: number = 10;
+    @Input() crushValue: number = 10;
 
     heartClicked(){
         console.log(this.isClicked);
