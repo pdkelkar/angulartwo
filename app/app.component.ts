@@ -7,6 +7,7 @@ import { StarComponent } from './star/index';
 import { VoterComponent } from './voter/index';
 import { TweetComponent } from './tweet/index';
 import { ZippyComponent } from './zippy/index';
+import { ContactFormComponent } from './contact-form/index';
 
 @Component({
   selector: 'my-app',
@@ -18,15 +19,15 @@ import { ZippyComponent } from './zippy/index';
   <twinkle [is-favourite]="post.favouriteValue"  (starHasChanged)="onStarChange($event)"></twinkle>
   <voter></voter>
   <crush></crush>  
-  <tweet></tweet>-->
+  <tweet></tweet>
   <zippy title="Who can see my stuff ?"> 
     This content is for who can see my stuff
   </zippy>
 
   <zippy title="Who can contact me ?">
     This content is for who can contact me
-  </zippy>
-  
+  </zippy> -->
+  <contact-form></contact-form>
   `
   
 })
