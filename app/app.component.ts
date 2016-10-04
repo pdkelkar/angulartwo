@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { CourseComponent } from './course/index';
 import { AuthorComponent } from './author/index';
@@ -8,6 +8,11 @@ import { VoterComponent } from './voter/index';
 import { TweetComponent } from './tweet/index';
 import { ZippyComponent } from './zippy/index';
 import { ContactFormComponent } from './contact-form/index';
+import { SubscriptionFormComponent } from './subscription-form/index';
+import { PasswordChangeComponent } from './password-change/index';
+import { PeopleComponent } from './people/index';
+// import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+// import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'my-app',
@@ -26,14 +31,16 @@ import { ContactFormComponent } from './contact-form/index';
 
   <zippy title="Who can contact me ?">
     This content is for who can contact me
-  </zippy> -->
-  <contact-form></contact-form>
-  `
-  
+  </zippy>
+  <contact-form></contact-form> 
+  <subscription-form></subscription-form> 
+  <password-change></password-change>-->
+  <people></people>
+  `  
 })
 export class AppComponent { 
 
- post = {
+   post = {
     title: 'Some Title',
     favouriteValue: true
   }
@@ -42,4 +49,32 @@ export class AppComponent {
     console.log($event);
   }
 
+//   searchForm:FormGroup;
+
+//   constructor(private fb: FormBuilder){
+//     this.searchForm = this.fb.group({
+//       'search': ['']
+//     });
+//   }
+
+//   ngOnInit(){
+//     this.searchArtist();
+    
+//   }
+
+//  searchArtist(){
+   
+//    this.searchForm.get('search')
+//        .valueChanges      
+//        .subscribe(data => console.log(data));
+//  }
+
+// foo(){
+//    var obs1 = Observable.from([1,2,3,4,5,6,7,8,9,10]);
+//    // obs1.subscribe(num => console.log(num));
+//    obs1.filter(num => num%2==0)       
+//        .subscribe(num => console.log(num)); 
+// }
+  
+ 
 }
