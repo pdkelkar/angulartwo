@@ -11,6 +11,7 @@ import { ContactFormComponent } from './contact-form/index';
 import { SubscriptionFormComponent } from './subscription-form/index';
 import { PasswordChangeComponent } from './password-change/index';
 import { PeopleComponent } from './people/index';
+import { UserProfileComponent } from './user-profile/index';
 // import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 // import { Observable } from 'rxjs/Rx';
 
@@ -34,8 +35,9 @@ import { PeopleComponent } from './people/index';
   </zippy>
   <contact-form></contact-form> 
   <subscription-form></subscription-form> 
-  <password-change></password-change>-->
-  <people></people>
+  <password-change></password-change>
+  <people></people>-->
+  <gituser></gituser>
   `  
 })
 export class AppComponent { 

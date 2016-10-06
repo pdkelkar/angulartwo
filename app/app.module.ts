@@ -15,6 +15,7 @@ import { ZippyComponent } from './zippy/index';
 import { ContactFormComponent } from './contact-form/index';
 import { SubscriptionFormComponent } from './subscription-form/index';
 import { PeopleComponent } from './people/index';
+import { UserProfileComponent } from './user-profile/index';
 //import { PasswordChangeComponent } from './password-change/index';
 
 //Pipes
@@ -26,7 +27,7 @@ import { AutoGrowDirective } from './auto-grow.directive';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, HttpModule, JsonpModule ],  
   declarations: [AppComponent, CourseComponent, AuthorComponent, StarComponent, HeartComponent, VoterComponent, TweetComponent,
-                 ZippyComponent, PeopleComponent, AutoGrowDirective, SummaryPipe],  
+                 ZippyComponent, PeopleComponent, UserProfileComponent, AutoGrowDirective, SummaryPipe],  
   bootstrap: [AppComponent]  
 })
 export class AppModule { }

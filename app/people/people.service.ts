@@ -27,7 +27,7 @@ export class PeopleService {
         return this.http.get(this.peopleURL)                        
                         .map(this.extractData)
                         .catch(this.handleError)
-                        .delay(3000);
+                        .delay(1000);
 
     }
 
