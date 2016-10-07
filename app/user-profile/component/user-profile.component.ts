@@ -64,10 +64,11 @@ export class UserProfileComponent implements OnInit{
 
     private getGitProfile(){
         this._userProfileSvc.getGitProfile()
-                            .subscribe(joined => {
-                                this._isLoading = false;
+                            .subscribe(joined => {                               
                                 this._userProfile = joined[0],
                                 this._followers = joined[1]
+                            },null,() =>  {
+                                this._isLoading = false;
                             });
     }
 
