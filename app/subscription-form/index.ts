@@ -1,0 +1,1 @@
+export { SubscriptionFormComponent } from './subscription-form.component';
