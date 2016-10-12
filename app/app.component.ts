@@ -1,17 +1,18 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { CourseComponent } from './course/index';
-import { AuthorComponent } from './author/index';
-import { StarComponent } from './star/index';
-//import { HeartComponent } from './heart/index';
-import { VoterComponent } from './voter/index';
-import { TweetComponent } from './tweet/index';
-import { ZippyComponent } from './zippy/index';
-import { ContactFormComponent } from './contact-form/index';
-import { SubscriptionFormComponent } from './subscription-form/index';
-import { PasswordChangeComponent } from './password-change/index';
-import { PeopleComponent } from './people/index';
-import { UserProfileComponent } from './user-profile/index';
+// import { CourseComponent } from './course/index';
+// import { AuthorComponent } from './author/index';
+// import { StarComponent } from './star/index';
+// //import { HeartComponent } from './heart/index';
+// import { VoterComponent } from './voter/index';
+// import { TweetComponent } from './tweet/index';
+// import { ZippyComponent } from './zippy/index';
+// import { ContactFormComponent } from './contact-form/index';
+// import { SubscriptionFormComponent } from './subscription-form/index';
+// import { PasswordChangeComponent } from './password-change/index';
+// import { PeopleComponent } from './people/index';
+// import { UserProfileComponent } from './user-profile/index';
+// import { CrisisListComponent, HeroListComponent } from './my-router/index';
 // import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 // import { Observable } from 'rxjs/Rx';
 
@@ -36,8 +37,17 @@ import { UserProfileComponent } from './user-profile/index';
   <contact-form></contact-form> 
   <subscription-form></subscription-form> 
   <password-change></password-change>
-  <people></people>-->
-  <gituser></gituser>
+  <people></people>
+  <gituser></gituser>-->
+  
+
+  <div class="w3-container">     
+    <a class="w3-btn w3-light-grey w3-round w3-text-grey" routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
+    <a class="w3-btn w3-light-grey w3-round w3-text-grey" routerLink="/heroes" routerLinkActive="active">Heroes</a>
+  </div>
+
+  <router-outlet></router-outlet>
+  
   `  
 })
 export class AppComponent { 
