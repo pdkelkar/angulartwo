@@ -17,13 +17,17 @@ import { Hero, HeroListService } from '../index';
 export class HeroListComponent implements OnInit{
 
    private _heroes:Hero[]=[]; 
+   private errorMessage:any;
+
    constructor(private _heroListSvc:HeroListService){}
 
    ngOnInit(){
-       this._heroes = this.getHeroes();
+       this.getHeroes();
    }
 
-   private getHeroes():Hero[]{
-       return this._heroListSvc.getHeroes();
+   private getHeroes() {
+       return this._heroListSvc.getHeroes()
+                  .subscribe(heroes => this._heroes = heroes,
+                             error =>  this.errorMessage = <any>error);
    } 
 }
