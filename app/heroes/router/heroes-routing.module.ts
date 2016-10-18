@@ -7,6 +7,7 @@ import { HeroListComponent, HeroDetailComponent } from '../index';
     imports: [RouterModule.forChild([
         { path: 'heroes', component: HeroListComponent},
         { path: 'hero-detail', component: HeroDetailComponent},
+        { path: 'hero/:id', component: HeroDetailComponent},
         { path: '', component: HeroListComponent}
     ])],
     exports: [RouterModule]
