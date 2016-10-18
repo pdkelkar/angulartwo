@@ -31,8 +31,8 @@ export class HeroListComponent implements OnInit{
 
    private _heroes:Hero[]=[]; 
    private errorMessage:any;
-   private _selectedId:number;
-   private _selectedName:string; 
+   private _selectedId:number=0;
+   private _selectedName:string=''; 
    constructor(private _route: ActivatedRoute, private _router:Router, private _heroListSvc:HeroListService){}
 
    ngOnInit(){

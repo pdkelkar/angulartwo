@@ -4,8 +4,8 @@ import { CrisisListComponent } from '../index';
 
 @NgModule({
     imports: [RouterModule.forChild([
-        { path:'crisis-center', component: CrisisListComponent }
-        
+        { path:'crisis-center', component: CrisisListComponent },
+        { path:'', component: CrisisListComponent }        
         ])],
     exports: [RouterModule]
 

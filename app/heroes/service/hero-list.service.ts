@@ -34,7 +34,7 @@ export class HeroListService {
     }
 
     private _extractData(res:Response){
-        console.log("Response json: "+ JSON.stringify(res.json()));        
+        console.log("Heroes List Response json: "+ JSON.stringify(res.json()));        
         return res.json();
     }
 

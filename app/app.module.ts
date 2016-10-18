@@ -31,7 +31,7 @@ import { SummaryPipe } from './custompipe/summary.pipe';
 import { AutoGrowDirective } from './auto-grow.directive';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, HttpModule, JsonpModule, AppRoutingModule, HeroesModule, CrisisModule ],  
+  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, HttpModule, JsonpModule, AppRoutingModule, HeroesModule, CrisisModule],  
   // declarations: [AppComponent, CourseComponent, AuthorComponent, StarComponent, HeartComponent, VoterComponent, TweetComponent,
   //                ZippyComponent, PeopleComponent, UserProfileComponent, AutoGrowDirective, SummaryPipe],
   declarations: [AppComponent],  

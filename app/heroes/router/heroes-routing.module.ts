@@ -5,8 +5,7 @@ import { HeroListComponent, HeroDetailComponent } from '../index';
 
 @NgModule({
     imports: [RouterModule.forChild([
-        { path: 'heroes', component: HeroListComponent},
-        { path: 'hero-detail', component: HeroDetailComponent},
+        { path: 'heroes', component: HeroListComponent},       
         { path: 'hero/:id', component: HeroDetailComponent},
         { path: '', component: HeroListComponent}
     ])],
