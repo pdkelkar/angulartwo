@@ -1,0 +1,27 @@
+Developer Notes:
+
+1) If using index.ts in feature module, make sure the order of exports is correct.
+Generally this order works:
+
+--model
+--service
+--component
+--router
+--module
+
+e.g.
+
+//model
+export { Crisis } from './model/crisis.model';
+//service
+export { CrisisListService } from './service/crisis-list.service';
+//component
+export { CrisisListComponent } from './component/crisis-list.component';
+//routing
+export { CrisisRoutingModule } from './router/crisis-routing.module';
+//area module
+export { CrisisModule } from './crisis.module';
+
+If the order is not correct particularly service export after component you may get this exception:
+
+ Error: (SystemJS) Invalid providers for "<XXX>Component" - only instances of Provider and Type are allowed, got: [?undefined?](…)
