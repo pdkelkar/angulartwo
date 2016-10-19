@@ -15,12 +15,20 @@ import 'rxjs/add/operator/filter';
     selector: 'crisis-list',
     template: `
        <div class="row">
-            <div class = "col-md-6"> 
-                    <h4> Crisis List Component </h4>
-                    <div *ngFor="let cri of _crisis">
-                        {{cri.id}} {{cri.name}}
-
-                    </div>                   
+            <div class = "col-md-3"> 
+                    <h4> CRISIS AREA </h4>
+                     <table class="table table-hover">
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                        </tr>
+                       
+                        <tr *ngFor="let cri of _crisis">
+                            <td>{{cri.id}}</td>
+                            <td>{{cri.name}}</td>
+                        </tr>
+                     
+                    </table>                   
             </div>
        </div>
     `

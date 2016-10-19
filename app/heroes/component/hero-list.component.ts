@@ -13,16 +13,28 @@ import 'rxjs/add/operator/filter';
 @Component({
     selector:'hero-list',
     template:`
-        <h3>HEROES</h3>
+        <h4>HEROES AREA</h4>
        <div class="row">
             <div class="col-md-6"> 
-                <div *ngFor="let hero of _heroes"> 
+                <!-- <div *ngFor="let hero of _heroes"> 
                 <p></p>
                 <ul class="w3-navbar w3-border w3-round w3-light-grey">
                         <li class="w3-blue-grey">{{hero.id}}</li>
                         <li [ngStyle]="{'cursor':'pointer'}"  (click)="onSelected(hero)">{{hero.name}}</li>
                 </ul>
-                </div>
+                </div> -->
+                 <table class="table table-hover">
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                        </tr>
+                       
+                        <tr *ngFor="let hero of _heroes">
+                            <td>{{hero.id}}</td>
+                            <td [ngStyle]="{'cursor':'pointer'}"  (click)="onSelected(hero)">{{hero.name}}</td>
+                        </tr>
+                     
+                </table> 
             </div>
        </div>         
     `
