@@ -1,7 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-
 import { Crisis, CrisisListService } from '../index';
-//import { CrisisListService } from '../service/crisis-list.service';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
@@ -15,8 +13,8 @@ import 'rxjs/add/operator/filter';
     selector: 'crisis-list',
     template: `
        <div class="row">
-            <div class = "col-md-3"> 
-                    <h4> CRISIS AREA </h4>
+            <div class = "col-md-3">
+                <h4>Crisis List Component</h4>
                      <table class="table table-hover">
                         <tr>
                             <th>Id</th>
@@ -31,6 +29,7 @@ import 'rxjs/add/operator/filter';
                     </table>                   
             </div>
        </div>
+       <router-outlet></router-outlet>
     `
 })
 export class CrisisListComponent {

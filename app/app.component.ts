@@ -42,11 +42,11 @@ import { Component, Input, OnInit } from '@angular/core';
   
 
   <div class="w3-container">     
-     <a class="w3-btn w3-light-grey w3-round w3-text-grey" routerLink="/crisis-center" routerLinkActive="active">Crisis Area</a>
+    <a class="w3-btn w3-light-grey w3-round w3-text-grey" routerLink="/" routerLinkActive="active">Crisis Area</a>
     <a class="w3-btn w3-light-grey w3-round w3-text-grey" routerLink="/heroes" routerLinkActive="active">Heroes Area</a>
   </div>
 
-  <router-outlet></router-outlet>
+ <router-outlet></router-outlet>
   
   `  
 })
