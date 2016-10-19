@@ -25,3 +25,32 @@ export { CrisisModule } from './crisis.module';
 If the order is not correct particularly service export after component you may get this exception:
 
  Error: (SystemJS) Invalid providers for "<XXX>Component" - only instances of Provider and Type are allowed, got: [?undefined?](…)
+
+ 2) When defining router configuration with children configuration at different levels
+
+ e.g
+
+ { 
+            path:'crisis-center', 
+            component: CrisisCenterComponent,
+            children: [
+                {
+                    path:'', 
+                    component: CrisisListComponent,
+                    children:[
+                        {
+                            path:':id',
+                            component:CrisisDetailsComponent
+                        },
+                        {
+                            path:'',
+                            component:CrisisCenterHomeComponent
+                        }
+                    ] 
+                }
+
+            ] 
+        }
+
+    Make sure that each parent component has <router-outlet> defined in its template.
+    So in the above example - CrisisCenterComponent and CrisisListComponent will have it defined in their respective templates.

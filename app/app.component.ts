@@ -48,45 +48,45 @@ import { Component, Input, OnInit } from '@angular/core';
 
  <router-outlet></router-outlet>
   
-  `  
+  `
 })
-export class AppComponent { 
+export class AppComponent {
 
-   post = {
+  post = {
     title: 'Some Title',
     favouriteValue: true
   }
 
-  onStarChange($event){
+  onStarChange($event) {
     console.log($event);
   }
 
-//   searchForm:FormGroup;
+  //   searchForm:FormGroup;
 
-//   constructor(private fb: FormBuilder){
-//     this.searchForm = this.fb.group({
-//       'search': ['']
-//     });
-//   }
+  //   constructor(private fb: FormBuilder){
+  //     this.searchForm = this.fb.group({
+  //       'search': ['']
+  //     });
+  //   }
 
-//   ngOnInit(){
-//     this.searchArtist();
-    
-//   }
+  //   ngOnInit(){
+  //     this.searchArtist();
 
-//  searchArtist(){
-   
-//    this.searchForm.get('search')
-//        .valueChanges      
-//        .subscribe(data => console.log(data));
-//  }
+  //   }
 
-// foo(){
-//    var obs1 = Observable.from([1,2,3,4,5,6,7,8,9,10]);
-//    // obs1.subscribe(num => console.log(num));
-//    obs1.filter(num => num%2==0)       
-//        .subscribe(num => console.log(num)); 
-// }
-  
- 
+  //  searchArtist(){
+
+  //    this.searchForm.get('search')
+  //        .valueChanges      
+  //        .subscribe(data => console.log(data));
+  //  }
+
+  // foo(){
+  //    var obs1 = Observable.from([1,2,3,4,5,6,7,8,9,10]);
+  //    // obs1.subscribe(num => console.log(num));
+  //    obs1.filter(num => num%2==0)       
+  //        .subscribe(num => console.log(num)); 
+  // }
+
+
 }
