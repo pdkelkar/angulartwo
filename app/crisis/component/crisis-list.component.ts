@@ -23,7 +23,7 @@ import 'rxjs/add/operator/filter';
                        
                         <tr *ngFor="let cri of _crisis">
                             <td>{{cri.id}}</td>
-                            <td>{{cri.name}}</td>
+                            <td><a [routerLink]="[cri.id]">{{ cri.name }}</a></td>
                         </tr>
                      
                     </table>                   
@@ -48,5 +48,5 @@ export class CrisisListComponent {
                               .subscribe(crisis => this._crisis = crisis,
                                          error =>  this.errorMessage = <any>error
                                );             
-    }
+    }    
 }
